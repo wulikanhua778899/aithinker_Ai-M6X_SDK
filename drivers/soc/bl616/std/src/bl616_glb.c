@@ -36,9 +36,11 @@
 
 #include "bl616_clock.h"
 #include "bl616_glb.h"
+#include "bl616_glb_gpio.h"
 #include "bl616_aon.h"
 #include "bl616_hbn.h"
 #include "bl616_pds.h"
+#include "bl616_ef_ctrl.h"
 
 /** @addtogroup  BL616_Peripheral_Driver
  *  @{
