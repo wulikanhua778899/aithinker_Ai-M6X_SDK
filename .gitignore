@@ -5,7 +5,6 @@
 cscope*
 compile_commands.*
 components
-drivers
 bsp
 examples/solutions
 examples/wifi

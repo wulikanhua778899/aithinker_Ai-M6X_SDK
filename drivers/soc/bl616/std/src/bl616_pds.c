@@ -36,6 +36,7 @@
 
 #include "bl616.h"
 #include "bl616_pds.h"
+#include "bl616_ef_ctrl.h"
 
 /** @addtogroup  BL616_Peripheral_Driver
  *  @{
@@ -321,7 +322,7 @@ BL_Sts_Type ATTR_TCM_SECTION PDS_Get_GPIO_Pad_IntStatus(GLB_GPIO_Type pad)
  * @return SUCCESS or ERROR
  *
 *******************************************************************************/
-BL_Err_Type ATTR_TCM_SECTION PDS_Set_Flash_Pad_Pull_None(SF_Ctrl_Pin_Select pinCfg)
+BL_Err_Type ATTR_TCM_SECTION PDS_Set_Flash_Pad_Pull_None(uint8_t pinCfg)
 {
     if (pinCfg >= SF_IO_EXT_SF2_SWAP_IO3IO0) {
         PDS_Set_GPIO_Pad_Pn_Pu_Pd_Ie(PDS_GPIO_GROUP_SET_GPIO0_GPIO15, 0, 0, 0);
@@ -341,7 +342,7 @@ BL_Err_Type ATTR_TCM_SECTION PDS_Set_Flash_Pad_Pull_None(SF_Ctrl_Pin_Select pinC
  *
  * @note ext_flash need call this function after pds mode
 *******************************************************************************/
-BL_Err_Type ATTR_TCM_SECTION PDS_Set_Flash_Pad_Pull_None_Fast(SF_Ctrl_Pin_Select pinCfg)
+BL_Err_Type ATTR_TCM_SECTION PDS_Set_Flash_Pad_Pull_None_Fast(uint8_t pinCfg)
 {
     uint32_t tmpVal;
 
